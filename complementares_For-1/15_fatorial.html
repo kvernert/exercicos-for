@@ -1,0 +1,16 @@
+<script>
+    //PROBLEMA
+    /*
+    Desenvolva um programa que peça para o usuário informar um número inteiro positivo.
+    Após validar se este número fornecido é inteiro e positivo, calcule o fatorial deste número.
+    Apresente o resultado na tela.
+    */
+
+    const fatorial = Number(prompt("Informe o número que deseja saber o fatorial: "));
+    let resultado = 1;
+    for(let contador = 1; contador <= fatorial; contador++ ){
+      resultado = resultado * contador;
+    }
+    document.write(`O fatorial de ${fatorial}, é ${resultado}`);
+
+</script>
