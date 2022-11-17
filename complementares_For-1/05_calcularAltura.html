@@ -1,3 +1,4 @@
+<meta charset="UTF-8"> 
 <script>
     //PROBLEMA
     /*
@@ -8,11 +9,18 @@
     */
 
     //ENTRADA
-
+    const quant = Number(prompt("Informe quantas pessoas terão sua medida informada: "));
+    let alturas = [];
 
     //PROCESSAMENTO
+    for(let i=1; i<=quant; i++){
+        const altura = Number(prompt(`Informe a altura ${i} de ${quant}:`))
+        alturas.push(altura);
+    }
 
-    
     //SAÍDA
+    document.write(`A Altura Menor: ${alturas.sort((a, b) => b-a)[0]} </br>`);
+    document.write(`A Altura Maior: ${alturas.sort((a, b) => a-b)[0]}`);
+
     
 </script>
