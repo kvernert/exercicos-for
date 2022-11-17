@@ -13,9 +13,14 @@
     */
 
     //ENTRADA
-
+    const tabuada = Number(prompt("Informe qual número deseja calcular a tabuada"));
+    const inicio = Number(prompt("Informe o número de início: "));
+    const fim = Number(prompt("Informe o número de fim: "));
 
     //PROCESSAMENTO
+    for(i=inicio; i<=fim; i++){
+        document.write(`${tabuada} x ${i} = ${tabuada * i}</br>`);
+    }
 
     
     //SAÍDA

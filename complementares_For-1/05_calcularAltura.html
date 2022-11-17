@@ -14,7 +14,7 @@
 
     //PROCESSAMENTO
     for(let i=1; i<=quant; i++){
-        const altura = Number(prompt(`Informe a altura ${i} de ${quant}:`))
+        const altura = Number(prompt(`Informe a altura ${i} de ${quant}:`).replace(",", "."))
         alturas.push(altura);
     }
 

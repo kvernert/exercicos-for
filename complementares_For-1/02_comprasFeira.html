@@ -15,14 +15,55 @@
     */
 
     //ENTRADA
-
+    const tomate = Number(prompt("Informe a quantidade de tomates(Kg): "));
+    const batata = Number(prompt("Informe a quantidade de batata(Kg): "));
+    const batataDoce = Number(prompt("Informe a quantidade de batata doce(Kg): "));
+    const alface = Number(prompt("Informe a quantidade de alface(Und): "));
+    const cebola = Number(prompt("Informe a quantidade de cebola(Kg): "));
+    const cebolinha = Number(prompt("Informe a quantidade de cebolinha(Und): "));
+    const beterraba = Number(prompt("Informe a quantidade de beterraba(Kg): "));
 
     //PROCESSAMENTO
-    for(let i=1; i<=7; i++){
-        const pergunta = Number(prompt("Informe a quantidade de produtos que foram vendidos de "))
+    let soma = 0;
+    const tomatePreco = 3.90;
+    const batataPreco = 3.40; 
+    const batataDocePreco = 4.70;
+    const alfacePReco =  1.50;
+    const cebolaPreco = 2.90;
+    const cebolinhaPreco = 1.40;
+    const beterrabaPreco = 4.10;
+ 
+    if(tomate > 0){
+        const precoTotalT = tomate * tomatePreco;
+        soma = soma + precoTotalT;
     }
+    else if(batata > 0){
+        const precoTotalB = batata * batataPreco;
+        soma = soma + precoTotalB;
+    }
+    else if(batataDoce > 0){
+        const precoTotalBD = batataDoce * batataDocePreco;
+        soma = soma + precoTotalBD;
+    }
+    else if(alface > 0){
+        const precoTotalA = alface * alfacePReco;
+        soma = soma + precoTotalA;
+    }
+    else if(cebola > 0){
+        const precoTotalC = cebola * cebolaPreco;
+        soma = soma + precoTotalC;
+    }
+    else if(cebolinha > 0){
+        const precoTotalCB = cebolinha * cebolinhaPreco;
+        soma = soma + precoTotalCB;
+    }
+    else if(beterraba > 0){
+        const precoTotalBT = beterraba * beterrabaPreco;
+        soma = soma + precoTotalBT;
+    }
+    //SAÍDA
+    document.write(`O faturamento do feirante foi R$${soma}`);
+    
 
     
-    //SAÍDA
-    
-</script>
+</script> 
