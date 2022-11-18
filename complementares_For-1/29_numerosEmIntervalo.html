@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -9,11 +10,16 @@
 
 
     //PROCESSAMENTO
+    let array = [];
     for(i=1; i<=10; i++){
         const numero = Number(prompt(`Informe o número ${i} de 10: `))
+        if(numero >= 100 && numero <= 200){
+            array.push(numero);
+        }
     }
-
+    const percentagem = (array.length/10)*100;
     
     //SAÍDA
+    document.write(`A percentagem de números entre o intervalo entre 100 e 200: ${percentagem}% e a quantidade de números é ${array.length}`);
 
 </script>

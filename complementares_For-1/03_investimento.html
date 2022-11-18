@@ -8,27 +8,31 @@
     */
 
     //ENTRADA
-    let faturamento = 100
-    let mes24; 
-    let mes48;
-    let mes96;
-    //PROCESSAMENTO
+   let valorInvestido = 0;
+   let rendimento = 0.018;
+   let montante24meses = 0;
+   let rendimento24meses = 0;
+   let montante48meses = 0;
+   let rendimento48meses = 0;
+   let montante96meses = 0;
+   let rendimento96meses = 0;
 
-    for (let meses = 1; meses <= 96; meses++) {
-       faturamento = faturamento * 1.018
-        if (meses === 24) {
-            mes24 = faturamento
-        }
-        else if (meses === 48){
-            mes48 = faturamento
-        }
-        else if (meses === 96){
-            mes96 = faturamento
-        }
+   for(let mes = 1; mes <= 96; mes++){
+    valorInvestido = valorInvestido + 100;
+    valorInvestido = valorInvestido + (valorInvestido * 0.018);
+    if(mes === 48){
+        montante24meses = valorInvestido;
+        rendimento24meses = valorInvestido - 2400;
     }
-    //SAÍDA
-    document.write("")
-    document.write(`24 meses: R$${mes24.toFixed(2)} <br> 48 meses: R$${mes48.toFixed(2)} <br> 96 meses: R$${mes96.toFixed(2)}`)
-    
+    if (mes === 48){
+        montante48meses = valorInvestido;
+        rendimento48meses = valorInvestido - 4800 - rendimento24meses;
+    }
+    if (mes === 96){
+        montante96meses = valorInvestido;
+        rendimento96meses = valorInvestido - 9600 - rendimento24meses - rendimento48meses;
+
+    }
+}
     
 </script>
