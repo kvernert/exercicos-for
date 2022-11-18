@@ -11,11 +11,22 @@
     */
 
     //ENTRADA
-
+    const limiteInferior = Number(prompt("Informe um número de limite inferior: "));
+    const limiteSuperior = Number(prompt("Informe um número de limite superior: "));
+    let listaPar = [];
+    let soma = 0;
 
     //PROCESSAMENTO
-
-    
+    for(i = limiteInferior; i<=limiteSuperior-1; i++){
+        if(i % 2 === 0){
+            listaPar.push(i);
+        }
+    }
+    for(let numeros of listaPar){
+        soma = soma + numeros;
+    }
     //SAÍDA
+    document.write(`A lista de números pares: ${listaPar}</br>`);
+    document.write(`A soma desse intervalos é ${soma}`);
 
 </script>

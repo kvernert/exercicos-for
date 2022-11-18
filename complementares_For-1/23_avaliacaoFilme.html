@@ -11,18 +11,25 @@
     */
 
     let pessoas = Number(prompt("Informe quantas pessoas assistiram o filme:"));
-    let regular = [];
-    let bom = [];
+    let regular = 0;
+    let bom = 0;
     let idade = [];
+    let soma = 0;
+
     //PROCESSAMENTO
+
     for(let contador = 1; contador <= pessoas; contador++){
     idade.push = Number(prompt(`${contador} Informe a sua idade:`));
-    let avaliacao = (prompt(`${contador} Informe R para REGULAR e B para BOM`)).toLocaleUpperCase();
-    if(avaliacao === R){
-        idade.push(regular);
-    }else{
-        idade.push(bom);
-    };
+    let avaliacao = (prompt(`${contador} Informe R-para REGULAR e B-para BOM`)).toUpperCase();
+    if(avaliacao === "R"){
+        regular++
+    }
+    else{
+        bom++
+    }
+}
+for(idades of idade){
+    soma = soma + idade;
 }
     
 document.write(contador);

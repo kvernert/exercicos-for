@@ -18,7 +18,10 @@
 
     //PROCESSAMENTO
     for(i=inicio; i<=fim; i++){
-        document.write(`${tabuada} x ${i} = ${tabuada * i}</br>`);
+        resultado = tabuada * i
+        if(resultado % 2 === 0){
+            document.write(`${tabuada} x ${i} = ${resultado}</br>`);
+        }
     }
 
     //SAÍDA

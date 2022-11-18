@@ -6,11 +6,21 @@
     */
 
     //ENTRADA
+    let somaPar = 0;
+    let somaImpar = 0;
 
 
     //PROCESSAMENTO
-
-    
+    for(i=1; i <= 100; i++){
+        if(i % 2 === 0){
+            somaPar = somaPar + i;
+        }
+        else{
+            somaImpar = somaImpar + i;
+        }
+    }
     //SAÍDA
+    document.write(`A somatória de pares é: ${somaPar}</br>`);
+    document.write(`A somatória de ímpares é: ${somaImpar}`);
     
 </script>

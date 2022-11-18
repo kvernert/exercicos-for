@@ -8,12 +8,27 @@
     */
 
     //ENTRADA
-    
-
-
+    let faturamento = 100
+    let mes24; 
+    let mes48;
+    let mes96;
     //PROCESSAMENTO
 
-    
+    for (let meses = 1; meses <= 96; meses++) {
+       faturamento = faturamento * 1.018
+        if (meses === 24) {
+            mes24 = faturamento
+        }
+        else if (meses === 48){
+            mes48 = faturamento
+        }
+        else if (meses === 96){
+            mes96 = faturamento
+        }
+    }
     //SAÍDA
+    document.write("")
+    document.write(`24 meses: R$${mes24.toFixed(2)} <br> 48 meses: R$${mes48.toFixed(2)} <br> 96 meses: R$${mes96.toFixed(2)}`)
+    
     
 </script>

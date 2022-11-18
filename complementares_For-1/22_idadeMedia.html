@@ -9,11 +9,30 @@
     */
 
     //ENTRADA
+    let idadeM = 0;
+    let idadeF = 0;
+    let mediaMa = 0;
+    let mediaFe = 0;
 
 
     //PROCESSAMENTO
-
-    
+    for(i=1; i<=10; i++){
+        const sexo = prompt("Informe o sexo F-Feminino | M-Masculino").toUpperCase();
+        const idade = Number(prompt(`Informe a idade de ${i} para 10: `));
+        if(sexo === "M"){
+          idadeM = idadeM + idade
+          mediaMa++
+        }
+        else{
+            idadeF = idadeF + idade
+            mediaFe++
+        }
+    }
     //SAÍDA
+    let mediaM = idadeM/mediaMa;
+    let mediaF = idadeF/mediaFe;
+
+    document.write(`A média da idade das mulheres é: ${mediaF}</br>`);
+    document.write(`A média da idade os homens é: ${mediaM}`);
 
 </script>
