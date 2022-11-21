@@ -9,12 +9,46 @@
     */
 
     //ENTRADA
+    let peso50 = [];
+    let peso25 = [];
+    let pesos = [];
+    let soma1 = 0;
+    let soma2 = 0;
+    let somaTotal = 0;
 
 
     //PROCESSAMENTO
-    
+    for(i=1; i<=10; i++){
+        const idade = Number(prompt(`Informe sua idade ${i} de 10: `));
+        const informePeso = Number(prompt(`Informe seu peso ${i} de 10: `));
+        if(idade >= 50){
+            peso50.push(informePeso);
+        }
+        else if(idade <= 25){
+            peso25.push(informePeso);
+        }
+        else{
+            pesos.push(informePeso);
+        }
+    }
+    for(peso of peso50){
+        soma1 = soma1 + peso
+    }
+    for(peso of peso25){
+        soma2 = soma2 + peso;
+    }
+    for(peso of pesos){
+        somaTotal = somaTotal+  peso;
+    }
 
+    //MÉDIAS
+    const mediaPessoas50 = soma1/10;
+    const mediaPessoas25 = soma2/10;
+    const mediaFinal = (soma1 + soma2 + somaTotal)/10;
     
     //SAÍDA
+    document.write(`A Média do peso das pessoas que possuem mais de 50 anos é: ${mediaPessoas50}</br>`);
+    document.write(`A Média do peso das pessoas que possuem menos de 25 anos é: ${mediaPessoas25}</br>`);
+    document.write(`A Média do peso de todas as pessoas é: ${mediaFinal}`);
 
 </script>

@@ -11,11 +11,11 @@
     */
 
     //ENTRADA
-    let mulheresSim;
-    let homensNao;
-    let mulheresNao;
-    let homensSim;
-    
+    let mulheresSim = 0;
+    let homensNao = 0;
+    let mulheresNao = 0;
+    let homensSim = 0;
+    let homens = 0;
 
     //PROCESSAMENTO
     for(i=1; i<=10; i++){
@@ -29,14 +29,22 @@
         }
         else if(genero === "M" && expectativas === "S"){
             homensSim++
+            homens++
         }
         else if(genero === "M" && expectativas === "N"){
             homensNao++
+            homens++
         }
     }
     
-
+    const pessoasSim = mulheresSim + homensSim;
+    const pessoasNao = mulheresNao + homensNao;
+    const percentual = homensNao/homens;
     
     //SAÍDA
+    document.write(`O número de pessoas que responderam sim: ${pessoasSim}</br>`);
+    document.write(`O número de pessoas que responderam não: ${pessoasNao}</br>`);
+    document.write(`Mulheres que responderam sim: ${mulheresSim}</br>`);
+    document.write(`O percentual de homens que respondeu não foi: ${percentual}`);
 
 </script>

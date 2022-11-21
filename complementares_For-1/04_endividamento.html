@@ -6,13 +6,13 @@
     Em quantos meses a pessoa terá gasto todo o seu valor investido?
     */
 
-    //ENTRADA
-    
+    let valor = 10000;
+    let meses = 0;
+    for (i = 0; 300 <= valor; i++){
+        meses++
+        valor = (valor - 300) * 1.03;
+    }
 
-
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
+    document.write(`Em ${meses} meses a pessoa terá gasto todo o seu valor investido`);
     
 </script>
