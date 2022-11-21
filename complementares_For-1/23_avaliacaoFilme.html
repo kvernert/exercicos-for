@@ -10,30 +10,40 @@
     - O percentual de pessoas que classificou o filme como BOM
     */
 
+
+    //ENTRADA
+
     let pessoas = Number(prompt("Informe quantas pessoas assistiram o filme:"));
-    let regular = [];
-    let bom = [];
-    let idade = [];
-    let soma = 0;
+    let quantPessoasRegular = 0;
+    let idadePessoasRegular = 0;
+    let quantPessoasBom = 0;
+    let idadePessoasBom = 0;
+    let idadePessoas = 0;
 
     //PROCESSAMENTO
-
-    for(let contador = 1; contador <= pessoas; contador++){
-    idade.push = Number(prompt(`${contador} Informe a sua idade:`));
-    let avaliacao = (prompt(`${contador} Informe R-para REGULAR e B-para BOM`)).toUpperCase();
-    if(avaliacao === "R"){
-      regular.push(avaliacao);
+    for (let contador = 1; contador <= pessoas; contador++) {
+        let idade = Number(prompt(`${contador} Informe a sua idade:`));
+        let avaliacao = prompt(`${contador} Informe R para REGULAR e B para BOM`).toUpperCase();
+        idadePessoas = idadePessoas + idade;
+        if (avaliacao === "R") {
+            quantPessoasRegular++; //quantPessoasRegular = quantPessoasRegular + 1;
+            idadePessoasRegular = idadePessoasRegular + idade;
+        } else {
+            quantPessoasBom++;
+            idadePessoasBom = idadePessoasBom + idade;
+        };
     }
-    else{
-        bom.push(avaliacao);
-    }
-}
-for(idades of idade){
-    soma = soma + idade;
-}
-const media = soma/regular.length
-const media2 = soma
-document.write(contador);
-document.write(idade);
 
+    let pessoasFilmeRegular = quantPessoasRegular / pessoas * 100;
+    let pessoasFilmeBom = quantPessoasBom / pessoas * 100;
+
+
+    //SAÍDA
+
+
+    document.write(`- A média de idade das pessoas que responderam que o filme era REGULAR: ${idadePessoasRegular}</br>
+    - A média de idade das pessoas que responderam que o filme era BOM: ${idadePessoasBom}</br>
+    - A média de idade de todas as pessoas que assistiram ao filme: ${idadePessoas}</br>
+    - O percentual de pessoas que classificou o filme como REGULAR: ${pessoasFilmeRegular}%</br>
+    - O percentual de pessoas que classificou o filme como BOM: ${pessoasFilmeBom}%`);
 </script>

@@ -11,9 +11,30 @@
     */
 
     //ENTRADA
-
+    let mulheresSim;
+    let homensNao;
+    let mulheresNao;
+    let homensSim;
+    
 
     //PROCESSAMENTO
+    for(i=1; i<=10; i++){
+        const genero = prompt("Informe o gênero da pessoa (M-Masculino ou F-Feminino): ").toUpperCase();
+        const expectativas = prompt("Informe se o produto atendeu as suas expectativas (S-Sim ou N-Não): ").toUpperCase();  
+        if(genero === "F" && expectativas === "S"){
+            mulheresSim++
+        }
+        else if(genero === "F" && expectativas === "N"){
+            mulheresNao++
+        }
+        else if(genero === "M" && expectativas === "S"){
+            homensSim++
+        }
+        else if(genero === "M" && expectativas === "N"){
+            homensNao++
+        }
+    }
+    
 
     
     //SAÍDA

@@ -13,12 +13,13 @@
     //PROCESSAMENTO
     let soma = 0;
     for(let media of notasProgramacaoI){
-        
-
+        soma = soma + media;
     }
-    
+    const mediaTotal = soma/notasProgramacaoI.length;
 
-    
     //SAÍDA
+    document.write(`A maior média é: ${notasProgramacaoI.sort((a, b) => b-a)[0]}</br>`);
+    document.write(`A menor média é: ${notasProgramacaoI.sort((a, b) => a-b)[0]}</br>`);
+    document.write(`A média total é: ${mediaTotal.toFixed(2)}`);
     
 </script>
