@@ -16,9 +16,9 @@
 
     //PROCESSAMENTO
     for(let contador = 1; contador <= 36; contador++){
-        poupanca = poupanca * 1.015;
-        poupancaPlus = poupanca * 1.02;
-        fundoRenda = valorInserir * 1.04;
+        poupanca = poupanca + (poupanca * 0.015);
+        poupancaPlus = poupancaPlus + (poupanca * 0.02);
+        fundoRenda = fundoRenda + (fundoRenda * 0.04);
     }
 
     //SAÍDA
