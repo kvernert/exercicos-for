@@ -10,11 +10,21 @@
 
     //ENTRADA
     const valorInserir = Number(prompt("Informe o valor que deseja investir: "));
+    let poupanca = valorInserir;
+    let poupancaPlus = valorInserir;
+    let fundoRenda = valorInserir;
 
     //PROCESSAMENTO
-    
+    for(let contador = 1; contador <= 36; contador++){
+        poupanca = poupanca * 1.015;
+        poupancaPlus = poupanca * 1.02;
+        fundoRenda = valorInserir * 1.04;
+    }
 
-    
     //SAÍDA
+    document.write(`Considerando o valor investido R$${valorInserir} o valor final previsto final previsto, ao longo de 3 anos, considerando cada tipo de investimento é: </br>`);
+    document.write(`Poupança: 1,5% ao mês: R$${poupanca.toFixed(2)}</br>`);
+    document.write(`Poupança plus: 2% ao mês: R$${poupancaPlus.toFixed(2)}</br>`);
+    document.write(`Fundos de renda fixa: 4% ao mês: R$${fundoRenda.toFixed(2)}`);
 
 </script>
